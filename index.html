@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landjeli Sèwanou | Product Owner & Chef de Projet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'primary': '#1E3A8A', /* Bleu foncé */
+                    'secondary': '#3B82F6', /* Bleu clair */
+                    'accent': '#93C5FD', /* Bleu pastel */
+                    'light': '#F3F4F6', /* Blanc cassé */
+                    'dark': '#1E293B', /* Bleu nuit */
+                },
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: '1rem',
+                        sm: '2rem',
+                        lg: '4rem',
+                        xl: '5rem',
+                        '2xl': '6rem',
+                    },
+                },
+            }
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F3F4F6; /* Blanc cassé */
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            color: #1E3A8A; /* Bleu foncé */
+        }
+        .timeline-container::after {
+            background-color: #3B82F6; /* Bleu clair */
+        }
+        .timeline-item::after {
+            background-color: #1E3A8A; /* Bleu foncé */
+        }
+        .bg-primary {
+            background-color: #1E3A8A; /* Bleu foncé */
+        }
+        .text-primary {
+            color: #1E3A8A; /* Bleu foncé */
+        }
+        .hover\:bg-primary:hover {
+            background-color: #1E3A8A; /* Bleu foncé */
+        }
+        .hover\:text-primary:hover {
+            color: #1E3A8A; /* Bleu foncé */
+        }
+        .bg-light {
+            background-color: #F3F4F6; /* Blanc cassé */
+        }
+        .text-dark {
+            color: #1E293B; /* Bleu nuit */
+        }
+        .timeline-container {
+            position: relative;
+        }
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 10px 40px;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        .timeline-left {
+            left: 0;
+        }
+        .timeline-right {
+            left: 50%;
+        }
+        .timeline-left::after {
+            right: -10px;
+        }
+        .timeline-right::after {
+            left: -10px;
+        }
+        @media screen and (max-width: 768px) {
+            .timeline-container::after {
+                left: 31px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item::after {
+                left: 21px;
+            }
+            .timeline-left, .timeline-right {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <header-component></header-component>
+    
+    <main>
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-gradient-to-r from-primary to-accent text-white">
+            <div class="absolute inset-0 opacity-20" style="background-image: url('https://static.vecteezy.com/system/resources/previews/012/003/621/non_2x/modern-purple-gradient-background-with-sporty-design-cool-gaming-concept-banner-presentation-social-media-certificate-brochure-eps10-vector.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="container relative mx-auto px-4 py-16 md:py-24 lg:py-32">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 animate__animated animate__fadeInUp text-white">Landjeli Sèwanou</h1>
+                        <h2 class="text-xl md:text-2xl lg:text-3xl font-medium mb-6 animate__animated animate__fadeInUp animate__delay-1s text-white">Product Owner & Chef de Projet</h2>
+                        <p class="text-lg mb-8 animate__animated animate__fadeInUp animate__delay-2s">Étudiant en Master 2 à Epitech, passionné par l'IA et la gestion de projets numériques</p>
+                        <div class="flex flex-wrap gap-4 animate__animated animate__fadeInUp animate__delay-3s">
+                            <a href="#contact" class="bg-white text-primary hover:bg-light hover:text-accent transition-colors duration-300 font-medium py-3 px-6 rounded-lg shadow-lg">Me contacter</a>
+                            <a href="https://supabasekong-shipstation.badalhibadal.com/storage/v1/object/public/shipstation-websites/temporary-assets/1745761704731-purple_and_white_clean_and_professional_resume.pdf" target="_blank" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary transition-colors duration-300 font-medium py-3 px-6 rounded-lg">Voir mon CV</a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl animate__animated animate__fadeIn">
+                            <img src="https://supabasekong-shipstation.badalhibadal.com/storage/v1/object/public/shipstation-websites/websites/landjeli-s-wanou-uND0W_GR/assets/1745779240966-img_5852.jpeg" alt="Landjeli Sèwanou" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">À propos de moi</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+                </div>
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0 px-4">
+                        <p class="text-lg mb-6 text-gray-700">Étudiant en Master 2 à Epitech, je suis passionné par l'intelligence artificielle, la gestion de projets et la coordination d'équipe. Grâce à mon parcours académique en Programmation, IoT et Intelligence Artificielle, je combine expertise technique et vision stratégique pour accompagner les entreprises dans leur transformation numérique.</p>
+                        <p class="text-lg mb-6 text-gray-700">J'ai fondé ma micro-entreprise Sewanou, à travers laquelle je propose des services en freelance dans le domaine du digital : gestion de projets numériques, développement web, et conseil en stratégie digitale. Mon objectif est de contribuer à des projets innovants et impactants, tout en continuant à apprendre dans un cadre stimulant.</p>
+                        <p class="text-lg mb-6 text-gray-700">Actuellement, je suis à la recherche d'un stage à temps plein (5j/sem) dès mai 2025, pour une durée de 6 mois, en tant que chef de projet, product owner ou sur tout projet nécessitant l'exploitation de mes compétences tout en m'offrant un cadre d'apprentissage enrichissant.</p>
+                        <p class="text-lg text-gray-700">Je suis curieux, dynamique, et j'apprécie autant le travail en équipe qu'en autonomie. Je reste motivé par la collaboration et l'exploration de solutions numériques innovantes.</p>
+                    </div>
+                    <div class="md:w-1/2 px-4">
+                        <div class="bg-light rounded-lg p-8 shadow-lg">
+                            <h3 class="text-2xl font-semibold text-primary mb-6">Informations personnelles</h3>
+                            <ul class="space-y-4">
+                                <li class="flex items-center">
+                                    <i class="fas fa-graduation-cap text-primary mr-3 w-6"></i>
+                                    <span>Master 2 Expertise IT - EPITECH (en cours)</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-language text-primary mr-3 w-6"></i>
+                                    <span>Français (natif), Anglais (intermédiaire)</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-map-marker-alt text-primary mr-3 w-6"></i>
+                                    <span>Disponible en présentiel et/ou en télétravail</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-calendar-alt text-primary mr-3 w-6"></i>
+                                    <span>Disponible dès Mai 2025 pour un stage de 6 mois</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-briefcase text-primary mr-3 w-6"></i>
+                                    <span>Ouvert à des missions freelance en parallèle</span>
+                                </li>
+                            </ul>
+                            <div class="mt-8 flex justify-center">
+                                <a href="https://supabasekong-shipstation.badalhibadal.com/storage/v1/object/public/shipstation-websites/temporary-assets/1745761704731-purple_and_white_clean_and_professional_resume.pdf" target="_blank" class="bg-primary hover:bg-accent text-white transition-colors duration-300 font-medium py-3 px-6 rounded-lg inline-flex items-center">
+                                    <i class="fas fa-download mr-2"></i> Télécharger mon CV
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Mes compétences</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Technical Skills -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 transform transition-transform duration-300 hover:scale-105">
+                        <div class="text-center mb-6">
+                            <div class="inline-block p-4 rounded-full bg-light text-primary mb-4">
+                                <i class="fas fa-laptop-code text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-dark">Compétences techniques</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Scrum et méthodes agiles</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Automatisation et scripting (Python, PowerShell, C, Node.js)</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Gestion de projets numériques</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Développement web (HTML, Laravel)</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Intelligence artificielle</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Git & GitHub</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Solutions No-code</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Software Skills -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 transform transition-transform duration-300 hover:scale-105">
+                        <div class="text-center mb-6">
+                            <div class="inline-block p-4 rounded-full bg-light text-primary mb-4">
+                                <i class="fas fa-tools text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-dark">Logiciels</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Trello</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Notion</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Evernote</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Uphint</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Slack</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Canva</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Figma</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Microsoft Office</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Google Analytics</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Soft Skills -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 transform transition-transform duration-300 hover:scale-105">
+                        <div class="text-center mb-6">
+                            <div class="inline-block p-4 rounded-full bg-light text-primary mb-4">
+                                <i class="fas fa-brain text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-semibold text-dark">Soft Skills</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Dynamisme et proactivité</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Esprit critique et analytique</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Sens du relationnel</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Travail en équipe</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Autonomie</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Capacité d'apprentissage rapide</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Motivation et discipline</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Sens de l'organisation</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                <span>Communication</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="experience" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Expériences professionnelles</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+                </div>
+                
+                <div class="timeline-container">
+                    <!-- Experience 0 - Sewanou -->
+                    <div class="timeline-item timeline-right mb-8">
+                        <div class="bg-white rounded-lg shadow-lg p-6 mr-0 md:mr-auto md:ml-8">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <h3 class="text-xl font-semibold text-primary">Fondateur – Freelance en Services Numériques</h3>
+                                <span class="bg-light text-primary text-sm font-medium px-3 py-1 rounded-full mt-2 md:mt-0">Avr. 2025 - aujourd'hui</span>
+                            </div>
+                            <h4 class="text-lg font-medium text-dark mb-2">Sewanou</h4>
+                            <div class="mb-4">
+                                <img src="https://assets.turbologo.com/blog/en/2021/06/28075633/purple-famous-logos-design.png" alt="Logo Sewanou" class="w-full h-48 object-contain rounded-lg mb-4">
+                            </div>
+                            <p class="text-gray-700 mb-4">J'ai créé ma micro-entreprise "Sewanou" afin de proposer des services dans le domaine du digital, avec une spécialisation en gestion de projet, développement web et accompagnement numérique. Je suis disponible pour des missions freelance en lien avec la stratégie digitale, la transformation numérique ou encore la coordination de projets tech.</p>
+                            <div class="flex flex-wrap gap-2 mt-4">
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">Gestion de projet</span>
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">Stratégie numérique</span>
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">Développement web</span>
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">Marketing digital</span>
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">E-commerce</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 1 -->
+                    <div class="timeline-item timeline-left mb-8">
+                        <div class="bg-white rounded-lg shadow-lg p-6 ml-0 md:ml-auto md:mr-8">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <h3 class="text-xl font-semibold text-primary">Stagiaire</h3>
+                                <span class="bg-light text-primary text-sm font-medium px-3 py-1 rounded-full mt-2 md:mt-0">Déc. 2024 - Mars 2025</span>
+                            </div>
+                            <h4 class="text-lg font-medium text-dark mb-2">NAZIF TOURE</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-2">
+                                <li>Analyse des besoins fonctionnels</li>
+                                <li>Conception de l'architecture de l'application</li>
+                                <li>Réalisation de tests et validation</li>
+                                <li>Maintenance et déboggage</li>
+                                <li>Optimisation des performances</li>
+                                <li>Veille technique</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 2 -->
+                    <div class="timeline-item timeline-right mb-8">
+                        <div class="bg-white rounded-lg shadow-lg p-6 mr-0 md:mr-auto md:ml-8">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <h3 class="text-xl font-semibold text-primary">Stagiaire</h3>
+                                <span class="bg-light text-primary text-sm font-medium px-3 py-1 rounded-full mt-2 md:mt-0">Oct. 2021 - Août 2022</span>
+                            </div>
+                            <h4 class="text-lg font-medium text-dark mb-2">MMT-AVOCAT</h4>
+                            <div class="mb-4">
+                                <img src="https://blog.onparallel.com/content/images/2022/12/Legaltech.jpg" alt="Legal Tech System" class="w-full h-48 object-cover rounded-lg mb-4">
+                            </div>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-2">
+                                <li>Création et optimisation d'un système d'automatisation des audits de sites</li>
+                                <li>Legal tech</li>
+                                <li>Legal design</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 3 -->
+                    <div class="timeline-item timeline-left mb-8">
+                        <div class="bg-white rounded-lg shadow-lg p-6 ml-0 md:ml-auto md:mr-8">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <h3 class="text-xl font-semibold text-primary">Coach</h3>
+                                <span class="bg-light text-primary text-sm font-medium px-3 py-1 rounded-full mt-2 md:mt-0">Juin - Août 2021</span>
+                            </div>
+                            <h4 class="text-lg font-medium text-dark mb-2">Beyoo-Tagoo</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-2">
+                                <li>Coach en informatique générale et en Microsoft</li>
+                                <li>Coach en stratégie commerciale</li>
+                                <li>Coach en marketing digital</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 4 -->
+                    <div class="timeline-item timeline-right mb-8">
+                        <div class="bg-white rounded-lg shadow-lg p-6 mr-0 md:mr-auto md:ml-8">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <h3 class="text-xl font-semibold text-primary">Stagiaire</h3>
+                                <span class="bg-light text-primary text-sm font-medium px-3 py-1 rounded-full mt-2 md:mt-0">Juin - Déc. 2020</span>
+                            </div>
+                            <h4 class="text-lg font-medium text-dark mb-2">EXPORTINUTY</h4>
+                            <div class="mb-4">
+                                <img src="https://accessally.com/wp-content/uploads/2023/07/accessally-featured-image-elearning-platform-development-1024x676.png" alt="E-learning Platform" class="w-full h-48 object-cover rounded-lg mb-4">
+                            </div>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-2">
+                                <li>Développement et gestion d'une plateforme de formation en ligne pour les traders</li>
+                                <li>Brainstorming sur des solutions innovantes</li>
+                                <li>Révision de l'application de e-commerce</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Experience 5 -->
+                    <div class="timeline-item timeline-left">
+                        <div class="bg-white rounded-lg shadow-lg p-6 ml-0 md:ml-auto md:mr-8">
+                            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                                <h3 class="text-xl font-semibold text-primary">Président de l'association de Slam</h3>
+                                <span class="bg-light text-primary text-sm font-medium px-3 py-1 rounded-full mt-2 md:mt-0">Sept. 2020 - Oct. 2022</span>
+                            </div>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1 ml-2">
+                                <li>Création de l'association et du bureau</li>
+                                <li>Formation et répétitions avec les membres de l'association par des clameurs professionnels</li>
+                                <li>Utilisation des réseaux sociaux pour faire la communication</li>
+                                <li>Diriger les membres du bureau et organiser des événements étudiants</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Projets réalisés</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://www.slideteam.net/media/catalog/product/cache/1280x720/p/r/project_portfolio_management_dashboard_and_chart_slide01.jpg" alt="Système de gestion de projet" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Système de gestion de projet</h3>
+                            <p class="text-gray-700 mb-4">Développement d'un tableau de bord pour la gestion de projets avec suivi des tâches, des ressources et des délais.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">Scrum</span>
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">Python</span>
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">Trello API</span>
+                            </div>
+                            <button class="project-details-btn bg-primary hover:bg-accent text-white transition-colors duration-300 font-medium py-2 px-4 rounded-lg w-full" data-project="1">Voir détails</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://clarra.com/wp-content/uploads/2022/11/clarra-blog-legal-technology-glossary-of-terms.jpg" alt="Système d'automatisation d'audits légaux" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Système d'automatisation d'audits légaux</h3>
+                            <p class="text-gray-700 mb-4">Conception et implémentation d'un système automatisé pour l'audit de conformité de sites web.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">Legal Tech</span>
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">Node.js</span>
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">Automatisation</span>
+                            </div>
+                            <button class="project-details-btn bg-primary hover:bg-accent text-white transition-colors duration-300 font-medium py-2 px-4 rounded-lg w-full" data-project="2">Voir détails</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                        <img src="https://www.soegjobs.com/wp-content/uploads/2020/09/Best-E-Learning-Portals.jpg" alt="Plateforme e-learning" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-primary mb-2">Plateforme de formation en ligne</h3>
+                            <p class="text-gray-700 mb-4">Développement d'une plateforme e-learning pour les traders avec modules de cours et suivi de progression.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">E-learning</span>
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">Web Development</span>
+                                <span class="bg-light text-primary text-xs font-medium px-2 py-1 rounded-full">UX/UI</span>
+                            </div>
+                            <button class="project-details-btn bg-primary hover:bg-accent text-white transition-colors duration-300 font-medium py-2 px-4 rounded-lg w-full" data-project="3">Voir détails</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Formation</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Education 1 -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-primary transform transition-transform duration-300 hover:scale-105">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold text-primary">Master Expertise IT</h3>
+                                <h4 class="text-lg font-medium text-dark">EPITECH</h4>
+                            </div>
+                            <span class="bg-light text-primary text-sm font-medium px-3 py-1 rounded-full">En cours</span>
+                        </div>
+                        <p class="text-gray-700">Spécialisation en gestion de projet IT et product ownership, avec un focus sur l'intelligence artificielle et les méthodologies agiles.</p>
+                    </div>
+                    
+                    <!-- Education 2 -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-primary transform transition-transform duration-300 hover:scale-105">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold text-primary">Bachelor Expertise IT</h3>
+                                <h4 class="text-lg font-medium text-dark">EPITECH</h4>
+                            </div>
+                            <span class="bg-light text-primary text-sm font-medium px-3 py-1 rounded-full">2020 - 2023</span>
+                        </div>
+                        <p class="text-gray-700">Formation en développement informatique, gestion de projet et méthodologies de travail collaboratives.</p>
+                    </div>
+                    
+                    <!-- Education 3 -->
+                    <div class="bg-white rounded-lg shadow-lg p-8 border-t-4 border-primary transform transition-transform duration-300 hover:scale-105">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold text-primary">Baccalauréat S</h3>
+                                <h4 class="text-lg font-medium text-dark"></h4>
+                            </div>
+                            <span class="bg-light text-primary text-sm font-medium px-3 py-1 rounded-full">2019</span>
+                        </div>
+                        <p class="text-gray-700">Baccalauréat scientifique avec spécialisation en mathématiques et sciences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interests Section -->
+        <section id="interests" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Centres d'intérêt</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-basketball-ball"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-dark">Basketball</h3>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-dark">Fortnite</h3>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-dark">Slam</h3>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center transform transition-transform duration-300 hover:scale-105">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <h3 class="text-lg font-semibold text-dark">Voyages</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Me contacter</h2>
+                    <div class="w-24 h-1 bg-primary mx-auto mb-8"></div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <div class="bg-light rounded-lg p-8 shadow-lg h-full">
+                            <h3 class="text-2xl font-semibold text-primary mb-6">Informations de contact</h3>
+                            <ul class="space-y-6">
+                                <li class="flex items-center">
+                                    <div class="bg-primary rounded-full p-3 mr-4 text-white">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-medium text-gray-500">Téléphone</h4>
+                                        <p class="text-lg font-medium">07 53 80 81 57</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="bg-primary rounded-full p-3 mr-4 text-white">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-medium text-gray-500">Email</h4>
+                                        <p class="text-lg font-medium">Sewanou.landjeli@gmail.com</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="bg-primary rounded-full p-3 mr-4 text-white">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-medium text-gray-500">LinkedIn</h4>
+                                        <p class="text-lg font-medium">Sewanou Landjeli</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-center">
+                                    <div class="bg-primary rounded-full p-3 mr-4 text-white">
+                                        <i class="fas fa-calendar-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-medium text-gray-500">Disponibilité</h4>
+                                        <p class="text-lg font-medium">Dès Mai 2025 (6 mois)</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="md:w-1/2">
+                        <div class="bg-white rounded-lg p-8 shadow-lg border border-gray-200 h-full">
+                            <h3 class="text-2xl font-semibold text-primary mb-6">À propos de ma recherche</h3>
+                            <p class="text-gray-700 mb-6">Je suis actuellement à la recherche d'un stage à temps plein (5j/sem) dès mai 2025, pour une durée de 6 mois, en tant que chef de projet, product owner ou sur tout projet nécessitant l'exploitation de mes compétences.</p>
+                            <p class="text-gray-700 mb-6">Je suis disponible en présentiel et/ou en télétravail, et je suis également ouvert à des missions freelance en parallèle de mon stage.</p>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="mailto:Sewanou.landjeli@gmail.com" class="bg-primary hover:bg-accent text-white transition-colors duration-300 font-medium py-3 px-6 rounded-lg text-center">
+                                    <i class="fas fa-envelope mr-2"></i> M'envoyer un email
+                                </a>
+                                <a href="tel:0753808157" class="bg-light hover:bg-secondary hover:text-white text-primary transition-colors duration-300 font-medium py-3 px-6 rounded-lg text-center">
+                                    <i class="fas fa-phone mr-2"></i> M'appeler
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-component></footer-component>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto mx-4">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 id="modal-title" class="text-2xl font-bold text-primary"></h2>
+                    <button id="close-modal" class="text-gray-500 hover:text-gray-700 text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="modal-content"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Web Components -->
+    <script>
+        class Header extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                    <header class="bg-white shadow-md sticky top-0 z-40">
+                        <div class="container mx-auto">
+                            <nav class="flex justify-between items-center py-4">
+                                <a href="#" class="text-2xl font-bold text-primary">LS<span class="text-accent">.</span></a>
+                                
+                                <ul class="hidden md:flex space-x-8">
+                                    <li><a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-300">À propos</a></li>
+                                    <li><a href="#skills" class="text-gray-700 hover:text-primary transition-colors duration-300">Compétences</a></li>
+                                    <li><a href="#experience" class="text-gray-700 hover:text-primary transition-colors duration-300">Expériences</a></li>
+                                    <li><a href="#projects" class="text-gray-700 hover:text-primary transition-colors duration-300">Projets</a></li>
+                                    <li><a href="#education" class="text-gray-700 hover:text-primary transition-colors duration-300">Formation</a></li>
+                                    <li><a href="#contact" class="text-gray-700 hover:text-primary transition-colors duration-300">Contact</a></li>
+                                </ul>
+                                
+                                <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                                    <i class="fas fa-bars text-2xl"></i>
+                                </button>
+                            </nav>
+                            
+                            <div id="mobile-menu" class="md:hidden hidden py-4 border-t border-gray-200">
+                                <ul class="space-y-4">
+                                    <li><a href="#about" class="block text-gray-700 hover:text-primary transition-colors duration-300">À propos</a></li>
+                                    <li><a href="#skills" class="block text-gray-700 hover:text-primary transition-colors duration-300">Compétences</a></li>
+                                    <li><a href="#experience" class="block text-gray-700 hover:text-primary transition-colors duration-300">Expériences</a></li>
+                                    <li><a href="#projects" class="block text-gray-700 hover:text-primary transition-colors duration-300">Projets</a></li>
+                                    <li><a href="#education" class="block text-gray-700 hover:text-primary transition-colors duration-300">Formation</a></li>
+                                    <li><a href="#contact" class="block text-gray-700 hover:text-primary transition-colors duration-300">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </header>
+                `;
+                this.initializeMenu();
+            }
+
+            initializeMenu() {
+                const mobileMenuButton = this.querySelector('#mobile-menu-button');
+                const mobileMenu = this.querySelector('#mobile-menu');
+                if (mobileMenuButton && mobileMenu) {
+                    mobileMenuButton.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+                
+                // Close mobile menu when clicking on a link
+                const mobileLinks = mobileMenu.querySelectorAll('a');
+                mobileLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.classList.add('hidden');
+                    });
+                });
+            }
+        }
+
+        class Footer extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                    <footer class="bg-dark text-white py-12">
+                        <div class="container mx-auto">
+                            <div class="flex flex-col md:flex-row justify-between items-center">
+                                <div class="mb-6 md:mb-0">
+                                    <h2 class="text-2xl font-bold mb-2">Landjeli Sèwanou</h2>
+                                    <p class="text-gray-300">Product Owner & Chef de Projet</p>
+                                </div>
+                                
+                                <div class="flex space-x-4 mb-6 md:mb-0">
+                                    <a href="mailto:Sewanou.landjeli@gmail.com" class="bg-primary hover:bg-accent text-white p-3 rounded-full transition-colors duration-300">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                    <a href="https://linkedin.com/in/sewanou-landjeli" target="_blank" class="bg-primary hover:bg-accent text-white p-3 rounded-full transition-colors duration-300">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="tel:0753808157" class="bg-primary hover:bg-accent text-white p-3 rounded-full transition-colors duration-300">
+                                        <i class="fas fa-phone"></i>
+                                    </a>
+                                </div>
+                                
+                                <div>
+                                    <a href="https://supabasekong-shipstation.badalhibadal.com/storage/v1/object/public/shipstation-websites/temporary-assets/1745761704731-purple_and_white_clean_and_professional_resume.pdf" target="_blank" class="bg-primary hover:bg-accent text-white transition-colors duration-300 font-medium py-2 px-4 rounded-lg inline-flex items-center">
+                                        <i class="fas fa-download mr-2"></i> Télécharger mon CV
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                                <p class="text-gray-400">&copy; ${new Date().getFullYear()} Landjeli Sèwanou. Tous droits réservés.</p>
+                            </div>
+                        </div>
+                    </footer>
+                `;
+            }
+        }
+
+        customElements.define('header-component', Header);
+        customElements.define('footer-component', Footer);
+
+        // Project Modal Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectButtons = document.querySelectorAll('.project-details-btn');
+            const modal = document.getElementById('project-modal');
+            const closeModal = document.getElementById('close-modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+            
+            const projectDetails = {
+                1: {
+                    title: "Système de gestion de projet",
+                    image: "https://www.slideteam.net/media/catalog/product/cache/1280x720/p/r/project_portfolio_management_dashboard_and_chart_slide01.jpg",
+                    description: "Développement d'un tableau de bord complet pour la gestion de projets, permettant le suivi des tâches, l'allocation des ressources et le respect des délais.",
+                    challenge: "Le principal défi était de créer une interface intuitive qui puisse présenter des données complexes de manière claire et accessible pour tous les membres de l'équipe, tout en s'intégrant avec les outils existants.",
+                    solution: "J'ai implémenté une solution basée sur Python avec une interface web responsive, utilisant l'API Trello pour la synchronisation des tâches. Le système inclut des tableaux de bord personnalisables, des rapports automatisés et des alertes en temps réel.",
+                    technologies: ["Python", "Flask", "Trello API", "JavaScript", "Chart.js", "Scrum"],
+                    results: "Le système a permis d'améliorer l'efficacité des équipes de 30%, de réduire les délais de livraison de 25% et d'augmenter la transparence des projets pour toutes les parties prenantes."
+                },
+                2: {
+                    title: "Système d'automatisation d'audits légaux",
+                    image: "https://clarra.com/wp-content/uploads/2022/11/clarra-blog-legal-technology-glossary-of-terms.jpg",
+                    description: "Conception et implémentation d'un système automatisé pour l'audit de conformité de sites web aux réglementations légales, notamment le RGPD et l'accessibilité.",
+                    challenge: "Les audits légaux manuels étaient chronophages et sujets à des erreurs humaines. Il fallait créer un système capable d'analyser automatiquement les sites web pour détecter les non-conformités légales.",
+                    solution: "J'ai développé un crawler web intelligent utilisant Node.js qui analyse les sites pour vérifier la présence des mentions légales obligatoires, la conformité RGPD, et l'accessibilité. Le système génère des rapports détaillés avec des recommandations d'amélioration.",
+                    technologies: ["Node.js", "Legal Tech", "Web Scraping", "RGPD", "Automatisation", "API REST"],
+                    results: "Le temps d'audit a été réduit de 80%, permettant au cabinet d'avocat de traiter plus de clients. La précision des audits a augmenté de 40% par rapport aux audits manuels."
+                },
+                3: {
+                    title: "Plateforme de formation en ligne",
+                    image: "https://www.soegjobs.com/wp-content/uploads/2020/09/Best-E-Learning-Portals.jpg",
+                    description: "Développement d'une plateforme e-learning complète pour les traders, incluant des modules de cours, des quiz interactifs et un système de suivi de progression.",
+                    challenge: "Créer une expérience d'apprentissage engageante et efficace pour les traders débutants, avec un contenu technique complexe qui devait rester accessible.",
+                    solution: "J'ai conçu une plateforme intuitive avec une progression pédagogique adaptative, des vidéos explicatives, des exercices pratiques et un forum d'entraide. La plateforme inclut également un système de simulation de trading pour pratiquer sans risque.",
+                    technologies: ["PHP", "MySQL", "JavaScript", "HTML/CSS", "UX/UI Design", "E-learning"],
+                    results: "La plateforme a attiré plus de 500 utilisateurs dans les trois premiers mois. Le taux de complétion des cours est de 78%, bien au-dessus de la moyenne du secteur (30%)."
+                }
+            };
+            
+            projectButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const projectId = this.getAttribute('data-project');
+                    const project = projectDetails[projectId];
+                    
+                    modalTitle.textContent = project.title;
+                    
+                    modalContent.innerHTML = `
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover rounded-lg mb-6">
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-dark mb-2">Description</h3>
+                            <p class="text-gray-700">${project.description}</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <h3 class="text-xl font-semibold text-dark mb-2">Défi</h3>
+                                <p class="text-gray-700">${project.challenge}</p>
+                            </div>
+                            
+                            <div>
+                                <h3 class="text-xl font-semibold text-dark mb-2">Solution</h3>
+                                <p class="text-gray-700">${project.solution}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-xl font-semibold text-dark mb-2">Technologies utilisées</h3>
+                            <div class="flex flex-wrap gap-2">
+                                ${project.technologies.map(tech => `<span class="bg-light text-primary text-sm font-medium px-3 py-1 rounded-full">${tech}</span>`).join('')}
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold text-dark mb-2">Résultats</h3>
+                            <p class="text-gray-700">${project.results}</p>
+                        </div>
+                    `;
+                    
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            closeModal.addEventListener('click', function() {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Close modal when clicking outside
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+            
+            // Close modal with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Adjust for header height
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
